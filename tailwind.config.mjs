@@ -11,6 +11,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'syne': ['var(--font-syne)'],
+        'inter': ['var(--font-inter)'],
+        'outfit': ['var(--font-outfit)'],
+        'space-grotesk': ['var(--font-space-grotesk)'],
+      },
     },
   },
   plugins: [],
