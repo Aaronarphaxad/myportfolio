@@ -159,6 +159,9 @@ export default function Hero() {
               <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <span className="text-gray-600">Bash</span>
               </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <span className="text-gray-600">PowerShell</span>
+              </div>
 
               {/* DevOps Tools */}
               <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -186,6 +189,12 @@ export default function Hero() {
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                 <span className="text-gray-600">Linux</span>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <span className="text-gray-600">Active Directory</span>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <span className="text-gray-600">Windows Server</span>
               </div>
 
               {/* Cloud & Infrastructure */}
