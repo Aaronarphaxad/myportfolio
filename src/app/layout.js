@@ -31,12 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${syne.variable} ${outfit.variable} ${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
+        className={`${syne.variable} ${outfit.variable} ${spaceGrotesk.variable} ${inter.variable} font-outfit antialiased min-h-screen`}
       >
         <Navbar />
-        <main className="flex-1 mt-16">
+        <div className="mt-16">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );

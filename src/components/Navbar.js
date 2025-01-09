@@ -7,10 +7,27 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
+
+    // Add scroll event listener
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const isActive = (path) => {
@@ -33,13 +50,13 @@ export default function Navbar() {
   // Prevent flash of incorrect content during hydration
   if (!mounted) {
     return (
-      <nav className="bg-white shadow-md fixed top-0 left-0 right-0 h-16 z-50">
+      <nav className="bg-white/70 shadow-md fixed top-0 left-0 right-0 h-16 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between h-full">
             <div className="flex-shrink-0 flex items-center">
               <span className="text-xl font-bold">
-                <span className="text-gray-900">Aaron</span>
-                <span className="text-blue-600">Omale</span>
+                <span className="text-gray-900">Arpha</span>
+                <span className="text-blue-600">xad</span>
               </span>
             </div>
           </div>
@@ -49,15 +66,19 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 right-0 h-16 z-50">
+    <nav className={`fixed top-0 left-0 right-0 h-16 z-50 transition-all duration-300
+      ${isScrolled 
+        ? 'bg-white/70 backdrop-blur-md shadow-md' 
+        : 'bg-white shadow-md'}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between h-full">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" onClick={handleLinkClick} className="flex items-center space-x-2">
               <span className="text-xl font-bold">
-                <span className="text-gray-900">Aaron</span>
-                <span className="text-blue-600">Omale</span>
+              <span className="text-gray-900">Arpha</span>
+              <span className="text-blue-600">xad.dev</span>
               </span>
               <span className="hidden sm:block text-sm text-gray-500 font-mono">
                 &lt;/&gt;
@@ -119,7 +140,9 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed left-0 right-0 bg-white shadow-lg">
+        <div className={`md:hidden fixed left-0 right-0 shadow-lg
+          ${isScrolled ? 'bg-white/70 backdrop-blur-md' : 'bg-white'}`}
+        >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
