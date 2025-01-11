@@ -196,8 +196,8 @@ export default function Hero() {
               className="md:w-1/2 order-1 md:order-2"
             >
               <div className="relative w-full h-[350px] md:h-[550px] max-w-[450px] mx-auto">
-                <div className="absolute -inset-4 bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-3xl blur-2xl transform rotate-6" />
-                <div className="absolute -inset-4 bg-gradient-to-l from-gray-300/20 to-gray-400/20 rounded-3xl blur-2xl transform -rotate-6" />
+                <div className="absolute -inset-4 bg-gradient-to-r from-gray-300/20 to-gray-400/20 rounded-3xl blur-2xl transform " />
+                <div className="absolute -inset-4 bg-gradient-to-l from-gray-300/20 to-gray-400/20 rounded-3xl blur-2xl transform " />
                 
                 <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-300/10 to-gray-400/10 mix-blend-overlay" />
