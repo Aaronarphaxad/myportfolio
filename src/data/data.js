@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "TaskHub",
+    description: "Fullstack app for remote organizations to share documentation.",
+    image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTF1ZW91anB5ODNxYzl1MmF6MDlncDJ4N3lpOHJlMDQ2cnN4YmE0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HR2LiUSnUDrXOMnGa9/giphy.gif",
+    technologies: ["Next.js", "Tailwind", "Supabase", "Bolt.new"],
+    live: "https://taskguide.vercel.app/",
+    github: "https://github.com/Aaronarphaxad/taskhub",
+    category: "Web Development"
+  },
+  {
     title: "Kash Paddy",
     description: "Fullstack app to display personal finance trends on a dashboard.",
     image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTF1ZW91anB5ODNxYzl1MmF6MDlncDJ4N3lpOHJlMDQ2cnN4YmE0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HR2LiUSnUDrXOMnGa9/giphy.gif",
